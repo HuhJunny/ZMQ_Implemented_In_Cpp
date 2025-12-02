@@ -10,8 +10,13 @@ find_package(cppzmq CONFIG REQUIRED)
 
 file(GLOB SRC_FILES "src/*.cpp")
 
-add_executable(ZMQ_Server "src/lec-05-prg-01-req-rep-basic-server.cpp")
-add_executable(ZMQ_Client "src/lec-05-prg-02-req-rep-basic-client.cpp")
+add_executable(ZMQ_Server_01 "src/lec-05-prg-01-req-rep-basic-server.cpp")
+add_executable(ZMQ_Client_02 "src/lec-05-prg-02-req-rep-basic-client.cpp")
+add_executable(ZMQ_Server_03 "src/lec-05-prg-03-pub-sub-basic-server.cpp")
+add_executable(ZMQ_Client_04 "src/lec-05-prg-04-pub-sub-basic-client.cpp")
 
-target_link_libraries(ZMQ_Server PRIVATE cppzmq)
-target_link_libraries(ZMQ_Client PRIVATE cppzmq)
+
+target_link_libraries(ZMQ_Server_01 PRIVATE cppzmq)
+target_link_libraries(ZMQ_Client_02 PRIVATE cppzmq)
+target_link_libraries(ZMQ_Server_03 PRIVATE cppzmq)
+target_link_libraries(ZMQ_Client_04 PRIVATE cppzmq)

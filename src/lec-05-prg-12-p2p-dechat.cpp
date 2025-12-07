@@ -6,6 +6,8 @@
 #include <chrono>
 #include <winsock2.h>
 #include <ws2tcpip.h>
+#include <sstream>
+
 
 #pragma comment(lib, "ws2_32.lib")
 
@@ -204,6 +206,16 @@ int main(int argc, char* argv[]) {
             }
         }
     }
+
+	cout << "closing p2p chatting program." << endl;
+
+	db_client_socket.close();
+	p2p_rx.close();
+	p2p_tx.close();
+    db_client_ctx.shutdown();
+	db_client_ctx.close();
+	relay_client.shutdown();
+	relay_client.close();
 
     return 0;
 }

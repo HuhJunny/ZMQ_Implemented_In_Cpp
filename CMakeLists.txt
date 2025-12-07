@@ -21,6 +21,7 @@ add_executable(ZMQ_Client_08 "src/lec-05-prg-08-pub-sub-and-pull-push-client-v2.
 add_executable(ZMQ_Server_09 "src/lec-05-prg-09-dealer-router-async-server.cpp")
 add_executable(ZMQ_Client_10 "src/lec-05-prg-10-dealer-router-async-client.cpp")
 add_executable(ZMQ_Client_11 "src/lec-05-prg-11-dealer-router-async-client-thread.cpp")
+add_executable(ZMQ_12 "src/lec-05-prg-12-p2p-dechat.cpp")
 
 
 target_link_libraries(ZMQ_Server_01 PRIVATE cppzmq)
@@ -34,3 +35,4 @@ target_link_libraries(ZMQ_Client_08 PRIVATE cppzmq)
 target_link_libraries(ZMQ_Server_09 PRIVATE cppzmq)
 target_link_libraries(ZMQ_Client_10 PRIVATE cppzmq)
 target_link_libraries(ZMQ_Client_11 PRIVATE cppzmq)
+target_link_libraries(ZMQ_12 PRIVATE cppzmq)
